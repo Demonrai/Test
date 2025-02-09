@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Assistant</title>
+</head>
+<body>
+    <h1>Welcome to the Chat Assistant</h1>
+    <form action="/search" method="post">
+        <label for="query">Enter your query:</label><br><br>
+        <input type="text" id="option" name="option" required><br><br>
+        <input type="submit" value="Ask">
+    </form>
+
+    {% if user_query %}
+    <h2>Your Query: {{ user_query }}</h2>
+    <h2>Response: {{ response }}</h2>
+    {% endif %}
+</body>
+</html>
